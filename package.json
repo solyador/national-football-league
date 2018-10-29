@@ -1,0 +1,31 @@
+{
+  "name": "nfl-app-backend",
+  "version": "1.0.0",
+  "description": "A national football league application",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon server.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "nfl"
+  ],
+  "author": "toufik bakhtaoui",
+  "license": "ISC",
+  "engines": {
+    "node": "9.2.1"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "morgan": "^1.9.1",
+    "supertest": "^3.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "helmet": "^3.14.0",
+    "mongoose": "^5.3.8"
+  }
+}
