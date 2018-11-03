@@ -2,7 +2,10 @@ const devConfig = {
     DB_URL: 'mongodb://localhost:27017/nfldb',
     PORT: process.env.PORT || 3000
 }
-const testConfig = {}
+const testConfig = {
+    DB_URL: 'mongodb://localhost:27017/nfldb_test',
+    PORT: process.env.PORT || 3000
+}
 const prodConfig = {}
 const defaultConfig = {
     DB_URL: 'mongodb://localhost:27017/nfldb',

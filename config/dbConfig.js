@@ -9,7 +9,7 @@ try {
     console.log('cannot connect to db')
 }
 
-mongoose.connection.once('open', () => console.log('mongodb running'))
+mongoose.connection.once('open', () => console.log('mongodb running ', url))
                    .on('error', err => {
                        throw err
                    })
