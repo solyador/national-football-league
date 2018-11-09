@@ -1,7 +1,21 @@
 language: node_js
+
 node_js: 9.2.1
+
 sudo: false
+
 install:
   - npm install
+
+before_script:
+  - sleep 15
+
 script:
   - npm run test
+
+env:
+  global:
+    - NODE_ENV=test
+
+services:
+  - MongoDB  
