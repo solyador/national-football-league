@@ -10,7 +10,7 @@ const testConfig = {
 
 const prodConfig = {
     DB_URL: 'mongodb://solo2902:solo2902@ds111319.mlab.com:11319/nfldb',
-    PORT: PORT: process.env.PORT || 3000
+    PORT: process.env.PORT || 3000
 }
 
 const defaultConfig = {
