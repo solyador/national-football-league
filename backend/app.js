@@ -10,7 +10,4 @@ teamsRoutes(app)
 seasonsRoutes(app)
 middleWareConfig(app)
 
-app.get('/', (req, res) => {
-    res.status(200).send('National footlball league')
-})
 module.exports = app

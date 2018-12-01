@@ -4,7 +4,10 @@
   "description": "A national football league application",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon server.js",
+    "dev": "npm install && cd frontend && npm install",
+    "server": "cross-env NODE_ENV=development nodemon server.js",
+    "client": "cd frontend && npm start",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" ",
     "test": "jest",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
