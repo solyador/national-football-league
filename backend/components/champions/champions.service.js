@@ -16,5 +16,12 @@ module.exports = {
         } catch (err) {
             return {}
         }
+    },
+    findOne: async (seasonId) => {
+        try {
+            return await Champion.findOne({ season: seasonId })
+        } catch (error) {
+            return {}
+        }
     }
 }

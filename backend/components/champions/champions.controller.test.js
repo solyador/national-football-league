@@ -33,4 +33,10 @@ describe('test champions controller', () => {
         const res = await request(app).post('/champions').send({ season: 3, team: 3 })
         expect(res.statusCode).toEqual(200)
     })
+
+    test('It should return a champion', async () => {
+        const res = await request(app).get('/champions/3')
+        expect(res.statusCode).toEqual(200)
+        expect(res.body).to
+    })
 })

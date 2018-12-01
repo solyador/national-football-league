@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon server.js",
-    "test": "jest"
+    "test": "jest",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "keywords": [
     "nfl"
@@ -16,8 +17,10 @@
     "node": "9.2.1"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "jest": "^23.6.0",
     "morgan": "^1.9.1",
+    "serve-static": "^1.13.2",
     "supertest": "^3.3.0"
   },
   "dependencies": {
