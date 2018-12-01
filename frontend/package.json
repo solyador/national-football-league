@@ -13,9 +13,7 @@
   "dependencies": {
     "vue": "^2.5.17",
     "vue-hot-reload-api": "^2.3.1",
-    "parcel-bundler": "^1.10.3"
-  },
-  "devDependencies": {
+    "parcel-bundler": "^1.10.3",
     "@vue/component-compiler-utils": "^2.3.0",
     "vue-template-compiler": "^2.5.17"
   }
