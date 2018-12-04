@@ -1,7 +1,18 @@
 const mongoose = require('mongoose');
 
 const SeasonSchema = mongoose.Schema({
-    week: Number
+    seasonId: {
+        type: Number,
+        required: true
+    },
+    weekToPlay: {
+        type: Number,
+        required: true
+    },
+    champion: {
+        type: Number,
+        required: false
+    }
 }, {
         timestamps: true
     });
