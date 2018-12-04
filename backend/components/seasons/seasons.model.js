@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const SeasonSchema = mongoose.Schema({
     seasonId: {
@@ -15,6 +15,6 @@ const SeasonSchema = mongoose.Schema({
     }
 }, {
         timestamps: true
-    });
+    })
 
-module.exports = mongoose.model('Season', SeasonSchema);
+module.exports = mongoose.model('Season', SeasonSchema)

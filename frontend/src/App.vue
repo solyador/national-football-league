@@ -12,9 +12,9 @@ export default {
     data() {
         return {
             message: 'Using parcel',
-        };
+        }
     },    
-};
+}
 </script>
 
 <style scoped>

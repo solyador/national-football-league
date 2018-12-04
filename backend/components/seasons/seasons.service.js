@@ -1,4 +1,4 @@
-const SeasonsModel = require('./seasons.model.js');
+const SeasonsModel = require('./seasons.model.js')
 
 module.exports = {
     findAll: async () => {

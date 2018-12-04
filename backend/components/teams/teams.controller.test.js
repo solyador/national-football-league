@@ -3,7 +3,7 @@ const request = require('supertest')
 require('../../config/dbConfig.js')
 const app = require('../../app.js')
 
-const TeamsModel = require('./teams.model.js');
+const TeamsModel = require('./teams.model.js')
 const teams = [
     new TeamsModel({
         teamId: 1, name: 'PATRIOTS', city: 'NEW ENGLAND',
@@ -16,7 +16,7 @@ const teams = [
 ]
 
 beforeEach(async () => {
-    jest.setTimeout(10000);
+    jest.setTimeout(10000)
     await TeamsModel.insertMany(teams)
 })
 

@@ -1,4 +1,4 @@
-const TeamsModel = require('./teams.model.js');
+const TeamsModel = require('./teams.model.js')
 
 module.exports = {
     findAll: async () => {

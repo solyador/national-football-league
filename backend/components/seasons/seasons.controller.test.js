@@ -4,14 +4,14 @@ const request = require('supertest')
 const app = require('../../app.js')
 require('../../config/dbConfig.js')
 
-const SeasonsModel = require('./seasons.model.js');
+const SeasonsModel = require('./seasons.model.js')
 const seasons = [
     new SeasonsModel({ seasonId: 1, weekToPlay: 1}),
     new SeasonsModel({ seasonId: 2, weekToPlay: 2})
 ]
 
 beforeEach(async () => {
-    jest.setTimeout(10000);
+    jest.setTimeout(10000)
     await SeasonsModel.insertMany(seasons)
 })
 
