@@ -29,7 +29,6 @@ module.exports = {
         try {
             const season = req.params.season
             const response = await championsService.findOne(season)
-            console.log(response)
             res.send(response)
         } catch (err) {
             res.status(HTTPStatus.INTERNAL_SERVER_ERROR).send({

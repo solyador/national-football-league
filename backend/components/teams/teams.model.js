@@ -1,17 +1,25 @@
 const mongoose = require('mongoose');
 
 const TeamSchema = mongoose.Schema({
-    teamId: Number,
-    name: String,
+    teamId: {
+        type: Number,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
     city: String,
     stadium: String,
     conference: {
         type: String,
-        enum: ['AFC', 'NFC']
+        enum: ['AFC', 'NFC'],
+        required: true
     },
     division: {
         type: String,
-        enum: ['NORTH', 'SOUTH', 'EAST', 'WEST']
+        enum: ['NORTH', 'SOUTH', 'EAST', 'WEST'],
+        required: true
     }
 }, {
         timestamps: true
