@@ -8,7 +8,7 @@
     "server": "cross-env NODE_ENV=development nodemon server.js",
     "client": "cd frontend && npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" ",
-    "test": "jest --watchAll",
+    "test": "jest",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "keywords": [
