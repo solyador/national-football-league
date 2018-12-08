@@ -125,9 +125,4 @@ describe('testing the teams resource, the errors', () => {
         const response = await request(app).delete('/teams/' + id)
         expect(response.status).toBe(404)
     })
-
-    it('It should return 404 when team to create not valid', async () => {
-        const response = await request(app).post('/teams').send({})
-        expect(response.status).toBe(403)
-    })
 })
