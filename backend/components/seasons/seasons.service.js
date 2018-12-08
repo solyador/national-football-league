@@ -6,15 +6,15 @@ module.exports = {
     },
 
     findOne: async (seasonId) => {
-        return await SeasonsModel.findOne({ seasonId: seasonId })
+        return await SeasonsModel.findById(seasonId)
     },
 
     delete: async (seasonId) => {
-        return await SeasonsModel.deleteOne({ seasonId: seasonId })
+        return await SeasonsModel.deleteOne({ _id: seasonId })
     },
 
     update: async (seasonId, data) => {
-        const query = { seasonId: seasonId }
+        const query = { _id: seasonId }
         const options = { new: true }
         return await SeasonsModel.findOneAndUpdate(query, data, options)
     },
@@ -23,8 +23,8 @@ module.exports = {
         try {
             return await SeasonsModel.create(season)
         } catch (error) {
-            console.log('bad request to create season: ', season, ' error ', error)   
+            console.log('bad request to create season: ', season, ' error ', error)
         }
-        
+
     }
 }

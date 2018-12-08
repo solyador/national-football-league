@@ -2,8 +2,7 @@ const rankingsService = require('./rankings.service.js')
 
 module.exports = {
     findAll: async (req, res) => {
-        const season = req.params.season
-        const rankings = await rankingsService.findAll(season)
+        const rankings = await rankingsService.findAll()
         if (!rankings) {
             return res.status(404).send({
                 message: "Rankings not found."
@@ -13,9 +12,8 @@ module.exports = {
     },
 
     findOne: async (req, res) => {
-        const rankingId = req.params.rankingId
-        const season = req.params.season
-        const ranking = await rankingsService.findOne(rankingId, season)
+        const rankingId = req.params.id
+        const ranking = await rankingsService.findOne(rankingId)
         if (!ranking) {
             return res.status(404).send({
                 message: "Ranking not found."
@@ -37,10 +35,9 @@ module.exports = {
     },
 
     update: async (req, res) => {
-        const rankingId = req.params.rankingId
-        const season = req.params.season
+        const rankingId = req.params.id
         const data = req.body
-        const rankingUpdated = await rankingsService.update(rankingId, season, data)
+        const rankingUpdated = await rankingsService.update(rankingId, data)
         if (!rankingUpdated) {
             return res.status(404).send({
                 message: 'Ranking not found'
@@ -50,12 +47,12 @@ module.exports = {
     },
 
     delete: async (req, res) => {
-        const rankingId = req.params.rankingId
+        const rankingId = req.params.id
         const response = await rankingsService.delete(rankingId)
         if (response.n === 0) {
             return res.status(404).send({
                 message: 'Ranking not found'
-            })     
+            })
         }
         if (response.n === 1) {
             return res.status(200).send({

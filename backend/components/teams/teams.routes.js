@@ -4,9 +4,9 @@ const teamsController = require('./teams.controller.js')
 
 
 routes.get('/', teamsController.findAll)
-routes.get('/:teamId', teamsController.findOne)
-routes.delete('/:teamId', teamsController.delete)
-routes.put('/:teamId', teamsController.update)
+routes.get('/:id', teamsController.findOne)
+routes.delete('/:id', teamsController.delete)
+routes.put('/:id', teamsController.update)
 routes.post('/', teamsController.create)
 
 module.exports = (app) => {

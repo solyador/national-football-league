@@ -5,16 +5,16 @@ module.exports = {
         return await TeamsModel.find()
     },
 
-    findOne: async (teamId) => {
-        return await TeamsModel.findOne({ teamId: teamId })
+    findOne: async (id) => {
+        return await TeamsModel.findOne({ _id: id })
     },
 
-    delete: async (teamId) => {
-        return await TeamsModel.deleteOne({ teamId: teamId })
+    delete: async (id) => {
+        return await TeamsModel.deleteOne({ _id: id })
     },
 
-    update: async (teamId, data) => {
-        const query = { teamId: teamId }
+    update: async (id, data) => {
+        const query = { _id: id }
         const options = { new: true }
         return await TeamsModel.findOneAndUpdate(query, data, options)
     },

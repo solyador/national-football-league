@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const RankingSchema = mongoose.Schema({
-    rankingId: {
+    ranking: {
         type: Number,
         required: true
     },
@@ -16,5 +16,5 @@ const RankingSchema = mongoose.Schema({
         timestamps: true
     })
 
-//RankingSchema.index({ rankingId: 1, season: 1 }, { unique: true })
+//RankingSchema.index({ ranking: 1, season: 1 }, { unique: true })
 module.exports = mongoose.model('Ranking', RankingSchema)

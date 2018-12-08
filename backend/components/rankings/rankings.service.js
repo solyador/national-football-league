@@ -1,20 +1,20 @@
 const RankingsModel = require('./rankings.model.js')
 
 module.exports = {
-    findAll: async (season) => {
-        return await RankingsModel.find({ season: season})
+    findAll: async () => {
+        return await RankingsModel.find()
     },
 
-    findOne: async (rankingId, season) => {
-        return await RankingsModel.findOne({ rankingId: rankingId, season: season })
+    findOne: async (rankingId) => {
+        return await RankingsModel.findById(rankingId)
     },
 
     delete: async (rankingId) => {
-        return await RankingsModel.deleteOne({ rankingId: rankingId })
+        return await RankingsModel.deleteOne({ _id: rankingId })
     },
 
-    update: async (rankingId, season, data) => {
-        const query = { rankingId: rankingId, season: season }
+    update: async (rankingId, data) => {
+        const query = { _id: rankingId }
         const options = { new: true }
         return await RankingsModel.findOneAndUpdate(query, data, options)
     },
@@ -23,8 +23,8 @@ module.exports = {
         try {
             return await RankingsModel.create(ranking)
         } catch (error) {
-            console.log('bad request to create ranking: ', ranking, ' error ', error)   
+            console.log('bad request to create ranking: ', ranking, ' error ', error)
         }
-        
+
     }
 }

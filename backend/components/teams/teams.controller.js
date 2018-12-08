@@ -12,8 +12,8 @@ module.exports = {
     },
 
     findOne: async (req, res) => {
-        const teamId = req.params.teamId
-        const team = await teamsService.findOne(teamId)
+        const id = req.params.id
+        const team = await teamsService.findOne(id)
         if (!team) {
             return res.status(404).send({
                 message: "Team not found."
@@ -35,9 +35,9 @@ module.exports = {
     },
 
     update: async (req, res) => {
-        const teamId = req.params.teamId
+        const id = req.params.id
         const data = req.body
-        const teamUpdated = await teamsService.update(teamId, data)
+        const teamUpdated = await teamsService.update(id, data)
         if (!teamUpdated) {
             return res.status(404).send({
                 message: 'Team not found'
@@ -47,8 +47,8 @@ module.exports = {
     },
 
     delete: async (req, res) => {
-        const teamId = req.params.teamId
-        const response = await teamsService.delete(teamId)
+        const id = req.params.id
+        const response = await teamsService.delete(id)
         if (response.n === 0) {
             return res.status(404).send({
                 message: 'Team not found'

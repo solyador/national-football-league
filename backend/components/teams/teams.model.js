@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const TeamSchema = mongoose.Schema({
-    teamId: {
+    team: {
         type: Number,
         required: true
     },
