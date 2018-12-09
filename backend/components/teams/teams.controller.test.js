@@ -1,41 +1,39 @@
 process.env.NODE_ENV = 'test'
-const request = require('supertest')
 require('../../config/db/dbConfig.js')
+const request = require('supertest')
 const mongoose = require('mongoose')
 const app = require('../../app.js')
-
 const TeamsModel = require('./teams.model.js')
-const teams = [
-    new TeamsModel({
-        team: 1,
-        name: 'PATRIOTS',
-        city: 'NEW ENGLAND',
-        stadium: 'GILLETTE',
-        conference: 'AFC',
-        division: 'NORTH'
-    }),
-    new TeamsModel({
-        team: 2,
-        name: 'BALTIMORE',
-        city: 'RAVENS',
-        stadium: 'Stadium',
-        conference: 'AFC',
-        division: 'NORTH'
-    })
-]
-
-beforeEach(async () => {
-    jest.setTimeout(10000)
-    await TeamsModel.remove({})
-    await TeamsModel.insertMany(teams)
-})
-
-afterEach(async () => {
-    await TeamsModel.remove({})
-})
 
 describe('testing the teams resource crud operations', () => {
+    beforeEach(async () => {
+        jest.setTimeout(10000)
+    })
+    
+    afterEach(async () => {
+        await TeamsModel.remove({})
+    })
+    
     test('It should return all teams', async () => {
+        const teams = [
+            new TeamsModel({
+                teamId: 1,
+                name: 'PATRIOTS',
+                city: 'NEW ENGLAND',
+                stadium: 'GILLETTE',
+                conference: 'AFC',
+                division: 'NORTH'
+            }),
+            new TeamsModel({
+                teamId: 2,
+                name: 'BALTIMORE',
+                city: 'RAVENS',
+                stadium: 'Stadium',
+                conference: 'AFC',
+                division: 'NORTH'
+            })
+        ]
+        await TeamsModel.insertMany(teams)
         const response = await request(app).get('/teams')
         const res = JSON.stringify(response.body)
 
@@ -45,7 +43,7 @@ describe('testing the teams resource crud operations', () => {
 
     test('It should return one team', async () => {
         const team = new TeamsModel({
-            team: 7,
+            teamId: 7,
             name: 'PATRIOTS',
             city: 'NEW ENGLAND',
             stadium: 'GILLETTE',
@@ -60,13 +58,13 @@ describe('testing the teams resource crud operations', () => {
         expect(response.body.city).toBe('NEW ENGLAND')
         expect(response.body.division).toBe('NORTH')
         expect(response.body.stadium).toBe('GILLETTE')
-        expect(response.body.team).toBe(7)
+        expect(response.body.teamId).toBe(7)
         expect(response.body.conference).toBe('AFC')
     })
 
     test('It should delete team', async () => {
         const teamToDelete = new TeamsModel({
-            team: 4, name: 'CHIEFS', city: 'CANSAS CITY',
+            teamId: 4, name: 'CHIEFS', city: 'CANSAS CITY',
             stadium: 'GILLETTE', conference: 'AFC', division: 'NORTH'
         })
         await teamToDelete.save()
@@ -80,7 +78,7 @@ describe('testing the teams resource crud operations', () => {
 
     test('It should update team', async () => {
         const teamToUpdate = new TeamsModel({
-            team: 4, name: 'CHIEFS', city: 'CANSAS CITY',
+            teamId: 4, name: 'CHIEFS', city: 'CANSAS CITY',
             stadium: 'GILLETTE', conference: 'AFC', division: 'NORTH'
         })
         await teamToUpdate.save()
@@ -94,7 +92,7 @@ describe('testing the teams resource crud operations', () => {
 
     test('It should create team', async () => {
         const teamToCreate = new TeamsModel({
-            team: 5, name: 'TEXANS', city: 'HOUSTON',
+            teamId: 5, name: 'TEXANS', city: 'HOUSTON',
             stadium: 'stadium', conference: 'AFC', division: 'NORTH'
         })
 

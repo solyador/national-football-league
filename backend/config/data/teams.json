@@ -1,6 +1,6 @@
 [
     {
-        "team": 1,
+        "teamId": 1,
         "name": "PATRIOTS",
         "city": "NEW ENGLAND",
         "stadium": "Gillette Stadium",
@@ -8,7 +8,7 @@
         "division": "EAST"
     },
     {
-        "team": 2,
+        "teamId": 2,
         "name": "DOLPHINS",
         "city": "MIAMI",
         "stadium": "Hard Rock Stadium",
@@ -16,7 +16,7 @@
         "division": "EAST"
     },
     {
-        "team": 3,
+        "teamId": 3,
         "name": "BILLS",
         "city": "BUFFALO",
         "stadium": "New Era Field",
@@ -24,7 +24,7 @@
         "division": "EAST"
     },
     {
-        "team": 4,
+        "teamId": 4,
         "name": "JETS",
         "city": "NEW YORK",
         "stadium": "MetLife Stadium",
@@ -32,7 +32,7 @@
         "division": "EAST"
     },
     {
-        "team": 5,
+        "teamId": 5,
         "name": "RAVENS",
         "city": "BALTIMORE",
         "stadium": "M&T Bank Stadium",
@@ -40,7 +40,7 @@
         "division": "NORTH"
     },
     {
-        "team": 6,
+        "teamId": 6,
         "name": "STEELERS",
         "city": "PITTSBURGH",
         "stadium": "Heinz Field",
@@ -48,7 +48,7 @@
         "division": "NORTH"
     },
     {
-        "team": 7,
+        "teamId": 7,
         "name": "BENGALS",
         "city": "CINCINNATI",
         "stadium": "Paul Brown Stadium",
@@ -56,7 +56,7 @@
         "division": "NORTH"
     },
     {
-        "team": 8,
+        "teamId": 8,
         "name": "BROWNS",
         "city": "CLEVELAND",
         "stadium": "FirstEnergy Stadium",
@@ -64,7 +64,7 @@
         "division": "NORTH"
     },
     {
-        "team": 9,
+        "teamId": 9,
         "name": "TEXANS",
         "city": "HOUSTON",
         "stadium": "NRG Stadium",
@@ -72,7 +72,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 10,
+        "teamId": 10,
         "name": "TITANS",
         "city": "TENNESSEE",
         "stadium": "Nissan Stadium",
@@ -80,7 +80,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 11,
+        "teamId": 11,
         "name": "COLTS",
         "city": "INDIANAPOLIS",
         "stadium": "Lucas Oil Stadium",
@@ -88,7 +88,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 12,
+        "teamId": 12,
         "name": "JAGUARS",
         "city": "JACKSONVILLE",
         "stadium": "EverBank Field",
@@ -96,7 +96,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 13,
+        "teamId": 13,
         "name": "CHIEFS",
         "city": "KANSAS CITY",
         "stadium": "Arrowhead Stadium",
@@ -104,7 +104,7 @@
         "division": "WEST"
     },
     {
-        "team": 14,
+        "teamId": 14,
         "name": "RAIDERS",
         "city": "OAKLAND",
         "stadium": "Oakland–Alameda County Coliseum",
@@ -112,7 +112,7 @@
         "division": "WEST"
     },
     {
-        "team": 15,
+        "teamId": 15,
         "name": "BRONCOS",
         "city": "DENVER",
         "stadium": "Sports Authority Field at Mile High",
@@ -120,7 +120,7 @@
         "division": "WEST"
     },
     {
-        "team": 16,
+        "teamId": 16,
         "name": "CHARGERS",
         "city": "LOS ANGELES",
         "stadium": "StubHub Center",
@@ -128,7 +128,7 @@
         "division": "WEST"
     },
     {
-        "team": 17,
+        "teamId": 17,
         "name": "COWBOYS",
         "city": "DALLAS",
         "stadium": "AT&T Stadium",
@@ -136,7 +136,7 @@
         "division": "EAST"
     },
     {
-        "team": 18,
+        "teamId": 18,
         "name": "GIANTS",
         "city": "NEW YORK",
         "stadium": "MetLife Stadium",
@@ -144,7 +144,7 @@
         "division": "EAST"
     },
     {
-        "team": 19,
+        "teamId": 19,
         "name": "REDSKINS",
         "city": "WASHINGTON",
         "stadium": "FedExField",
@@ -152,7 +152,7 @@
         "division": "EAST"
     },
     {
-        "team": 20,
+        "teamId": 20,
         "name": "PHILADELPHIA",
         "city": "EAGLES",
         "stadium": "Lincoln Financial Field",
@@ -160,7 +160,7 @@
         "division": "EAST"
     },
     {
-        "team": 21,
+        "teamId": 21,
         "name": "PACKERS",
         "city": "GREEN BAY",
         "stadium": "Lambeau Field",
@@ -168,7 +168,7 @@
         "division": "NORTH"
     },
     {
-        "team": 22,
+        "teamId": 22,
         "name": "LIONS",
         "city": "DETROIT",
         "stadium": "Ford Field",
@@ -176,7 +176,7 @@
         "division": "NORTH"
     },
     {
-        "team": 23,
+        "teamId": 23,
         "name": "VIKINGS",
         "city": "MINNESOTA",
         "stadium": "U.S. Bank Stadium",
@@ -184,7 +184,7 @@
         "division": "NORTH"
     },
     {
-        "team": 24,
+        "teamId": 24,
         "name": "BEARS",
         "city": "CHICAGO",
         "stadium": "Soldier Field",
@@ -192,7 +192,7 @@
         "division": "NORTH"
     },
     {
-        "team": 25,
+        "teamId": 25,
         "name": "FALCONS",
         "city": "ATLANTA",
         "stadium": "Mercedes-Benz Stadium",
@@ -200,7 +200,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 26,
+        "teamId": 26,
         "name": "BUCCANEERS",
         "city": "TAMPA BAY",
         "stadium": "Raymond James Stadium",
@@ -208,7 +208,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 27,
+        "teamId": 27,
         "name": "PANTHERS",
         "city": "CAROLINA",
         "stadium": "Bank of America Stadium",
@@ -216,7 +216,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 28,
+        "teamId": 28,
         "name": "SAINTS",
         "city": "NEW ORLEANS",
         "stadium": "Mercedes-Benz Superdome",
@@ -224,7 +224,7 @@
         "division": "SOUTH"
     },
     {
-        "team": 29,
+        "teamId": 29,
         "name": "CARDINALS",
         "city": "ARIZONA",
         "stadium": "University of Phoenix Stadium",
@@ -232,7 +232,7 @@
         "division": "WEST"
     },
     {
-        "team": 30,
+        "teamId": 30,
         "name": "49ERS",
         "city": "SAN FRANCISCO",
         "stadium": "Levis Stadium",
@@ -240,7 +240,7 @@
         "division": "WEST"
     },
     {
-        "team": 31,
+        "teamId": 31,
         "name": "SEAHAWKS",
         "city": "SEATTLE",
         "stadium": "CenturyLink Field",
@@ -248,7 +248,7 @@
         "division": "WEST"
     },
     {
-        "team": 32,
+        "teamId": 32,
         "name": "RAMS",
         "city": "LOS ANGELES",
         "stadium": "Los Angeles Memorial Coliseum",
