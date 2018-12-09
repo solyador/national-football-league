@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'test'
 const request = require('supertest')
-require('../../config/dbConfig.js')
+require('../../config/db/dbConfig.js')
 const mongoose = require('mongoose')
 const app = require('../../app.js')
 
@@ -26,6 +26,7 @@ const teams = [
 
 beforeEach(async () => {
     jest.setTimeout(10000)
+    await TeamsModel.remove({})
     await TeamsModel.insertMany(teams)
 })
 
@@ -34,7 +35,7 @@ afterEach(async () => {
 })
 
 describe('testing the teams resource crud operations', () => {
-    it('It should return all teams', async () => {
+    test('It should return all teams', async () => {
         const response = await request(app).get('/teams')
         const res = JSON.stringify(response.body)
 
@@ -42,7 +43,7 @@ describe('testing the teams resource crud operations', () => {
         expect(response.statusCode).toBe(200)
     })
 
-    it('It should return one team', async () => {
+    test('It should return one team', async () => {
         const team = new TeamsModel({
             team: 7,
             name: 'PATRIOTS',
@@ -63,7 +64,7 @@ describe('testing the teams resource crud operations', () => {
         expect(response.body.conference).toBe('AFC')
     })
 
-    it('It should delete team', async () => {
+    test('It should delete team', async () => {
         const teamToDelete = new TeamsModel({
             team: 4, name: 'CHIEFS', city: 'CANSAS CITY',
             stadium: 'GILLETTE', conference: 'AFC', division: 'NORTH'
@@ -77,7 +78,7 @@ describe('testing the teams resource crud operations', () => {
         expect(response.status).toBe(200)
     })
 
-    it('It should update team', async () => {
+    test('It should update team', async () => {
         const teamToUpdate = new TeamsModel({
             team: 4, name: 'CHIEFS', city: 'CANSAS CITY',
             stadium: 'GILLETTE', conference: 'AFC', division: 'NORTH'
@@ -91,7 +92,7 @@ describe('testing the teams resource crud operations', () => {
         expect(response.body.stadium).toBe('Stadium')
     })
 
-    it('It should create team', async () => {
+    test('It should create team', async () => {
         const teamToCreate = new TeamsModel({
             team: 5, name: 'TEXANS', city: 'HOUSTON',
             stadium: 'stadium', conference: 'AFC', division: 'NORTH'
@@ -108,19 +109,19 @@ describe('testing the teams resource crud operations', () => {
 
 describe('testing the teams resource, the errors', () => {
 
-    it('It should return 404 when team to get not exists', async () => {
+    test('It should return 404 when team to get not exists', async () => {
         const id = mongoose.Types.ObjectId()
         const response = await request(app).get('/teams/' + id)
         expect(response.status).toBe(404)
     })
 
-    it('It should return 404 when team to update not exists', async () => {
+    test('It should return 404 when team to update not exists', async () => {
         const id = mongoose.Types.ObjectId()
         const response = await request(app).put('/teams/' + id).send({})
         expect(response.status).toBe(404)
     })
 
-    it('It should return 404 when team to delete not exists', async () => {
+    test('It should return 404 when team to delete not exists', async () => {
         const id = mongoose.Types.ObjectId()
         const response = await request(app).delete('/teams/' + id)
         expect(response.status).toBe(404)

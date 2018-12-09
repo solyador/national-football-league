@@ -5,7 +5,7 @@ const seasonsController = require('./seasons.controller.js')
 
 routes.get('/', seasonsController.findAll)
 routes.get('/:id', seasonsController.findOne)
-routes.delete('/:id', seasonsController.delete)
+routes.delete('/:id', seasonsController.deleteOne)
 routes.put('/:id', seasonsController.update)
 routes.post('/', seasonsController.create)
 

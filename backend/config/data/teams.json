@@ -1,0 +1,258 @@
+[
+    {
+        "team": 1,
+        "name": "PATRIOTS",
+        "city": "NEW ENGLAND",
+        "stadium": "Gillette Stadium",
+        "conference": "AFC",
+        "division": "EAST"
+    },
+    {
+        "team": 2,
+        "name": "DOLPHINS",
+        "city": "MIAMI",
+        "stadium": "Hard Rock Stadium",
+        "conference": "AFC",
+        "division": "EAST"
+    },
+    {
+        "team": 3,
+        "name": "BILLS",
+        "city": "BUFFALO",
+        "stadium": "New Era Field",
+        "conference": "AFC",
+        "division": "EAST"
+    },
+    {
+        "team": 4,
+        "name": "JETS",
+        "city": "NEW YORK",
+        "stadium": "MetLife Stadium",
+        "conference": "AFC",
+        "division": "EAST"
+    },
+    {
+        "team": 5,
+        "name": "RAVENS",
+        "city": "BALTIMORE",
+        "stadium": "M&T Bank Stadium",
+        "conference": "AFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 6,
+        "name": "STEELERS",
+        "city": "PITTSBURGH",
+        "stadium": "Heinz Field",
+        "conference": "AFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 7,
+        "name": "BENGALS",
+        "city": "CINCINNATI",
+        "stadium": "Paul Brown Stadium",
+        "conference": "AFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 8,
+        "name": "BROWNS",
+        "city": "CLEVELAND",
+        "stadium": "FirstEnergy Stadium",
+        "conference": "AFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 9,
+        "name": "TEXANS",
+        "city": "HOUSTON",
+        "stadium": "NRG Stadium",
+        "conference": "AFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 10,
+        "name": "TITANS",
+        "city": "TENNESSEE",
+        "stadium": "Nissan Stadium",
+        "conference": "AFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 11,
+        "name": "COLTS",
+        "city": "INDIANAPOLIS",
+        "stadium": "Lucas Oil Stadium",
+        "conference": "AFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 12,
+        "name": "JAGUARS",
+        "city": "JACKSONVILLE",
+        "stadium": "EverBank Field",
+        "conference": "AFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 13,
+        "name": "CHIEFS",
+        "city": "KANSAS CITY",
+        "stadium": "Arrowhead Stadium",
+        "conference": "AFC",
+        "division": "WEST"
+    },
+    {
+        "team": 14,
+        "name": "RAIDERS",
+        "city": "OAKLAND",
+        "stadium": "Oakland–Alameda County Coliseum",
+        "conference": "AFC",
+        "division": "WEST"
+    },
+    {
+        "team": 15,
+        "name": "BRONCOS",
+        "city": "DENVER",
+        "stadium": "Sports Authority Field at Mile High",
+        "conference": "AFC",
+        "division": "WEST"
+    },
+    {
+        "team": 16,
+        "name": "CHARGERS",
+        "city": "LOS ANGELES",
+        "stadium": "StubHub Center",
+        "conference": "AFC",
+        "division": "WEST"
+    },
+    {
+        "team": 17,
+        "name": "COWBOYS",
+        "city": "DALLAS",
+        "stadium": "AT&T Stadium",
+        "conference": "NFC",
+        "division": "EAST"
+    },
+    {
+        "team": 18,
+        "name": "GIANTS",
+        "city": "NEW YORK",
+        "stadium": "MetLife Stadium",
+        "conference": "NFC",
+        "division": "EAST"
+    },
+    {
+        "team": 19,
+        "name": "REDSKINS",
+        "city": "WASHINGTON",
+        "stadium": "FedExField",
+        "conference": "NFC",
+        "division": "EAST"
+    },
+    {
+        "team": 20,
+        "name": "PHILADELPHIA",
+        "city": "EAGLES",
+        "stadium": "Lincoln Financial Field",
+        "conference": "NFC",
+        "division": "EAST"
+    },
+    {
+        "team": 21,
+        "name": "PACKERS",
+        "city": "GREEN BAY",
+        "stadium": "Lambeau Field",
+        "conference": "NFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 22,
+        "name": "LIONS",
+        "city": "DETROIT",
+        "stadium": "Ford Field",
+        "conference": "NFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 23,
+        "name": "VIKINGS",
+        "city": "MINNESOTA",
+        "stadium": "U.S. Bank Stadium",
+        "conference": "NFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 24,
+        "name": "BEARS",
+        "city": "CHICAGO",
+        "stadium": "Soldier Field",
+        "conference": "NFC",
+        "division": "NORTH"
+    },
+    {
+        "team": 25,
+        "name": "FALCONS",
+        "city": "ATLANTA",
+        "stadium": "Mercedes-Benz Stadium",
+        "conference": "NFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 26,
+        "name": "BUCCANEERS",
+        "city": "TAMPA BAY",
+        "stadium": "Raymond James Stadium",
+        "conference": "NFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 27,
+        "name": "PANTHERS",
+        "city": "CAROLINA",
+        "stadium": "Bank of America Stadium",
+        "conference": "NFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 28,
+        "name": "SAINTS",
+        "city": "NEW ORLEANS",
+        "stadium": "Mercedes-Benz Superdome",
+        "conference": "NFC",
+        "division": "SOUTH"
+    },
+    {
+        "team": 29,
+        "name": "CARDINALS",
+        "city": "ARIZONA",
+        "stadium": "University of Phoenix Stadium",
+        "conference": "NFC",
+        "division": "WEST"
+    },
+    {
+        "team": 30,
+        "name": "49ERS",
+        "city": "SAN FRANCISCO",
+        "stadium": "Levis Stadium",
+        "conference": "NFC",
+        "division": "WEST"
+    },
+    {
+        "team": 31,
+        "name": "SEAHAWKS",
+        "city": "SEATTLE",
+        "stadium": "CenturyLink Field",
+        "conference": "NFC",
+        "division": "WEST"
+    },
+    {
+        "team": 32,
+        "name": "RAMS",
+        "city": "LOS ANGELES",
+        "stadium": "Los Angeles Memorial Coliseum",
+        "conference": "NFC",
+        "division": "WEST"
+    }
+]

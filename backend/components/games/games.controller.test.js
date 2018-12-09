@@ -1,9 +1,8 @@
 process.env.NODE_ENV = 'test'
 
 const request = require('supertest')
-const mongoose = require('mongoose')
 const app = require('../../app.js')
-require('../../config/dbConfig.js')
+require('../../config//db/dbConfig.js')
 
 const GamesModel = require('./games.model.js')
 const games = [
@@ -39,7 +38,7 @@ describe('test games controller', () => {
         expect(response.body.awayTeam).toBe(12)
     })
 
-    it('It should delete game', async () => {
+    test('It should delete game', async () => {
         const gameToDelete = new GamesModel({ season: 3, week: 1, homeTeam: 3, awayTeam: 2 })
         await gameToDelete.save()
 
@@ -51,7 +50,7 @@ describe('test games controller', () => {
         expect(response.status).toBe(200)
     })
 
-    it('It should update game', async () => {
+    test('It should update game', async () => {
         let game = new GamesModel({
             season: 4,
             week: 1,
@@ -67,7 +66,7 @@ describe('test games controller', () => {
         expect(updatedGame.awayTeamScore).toBe(5)
     })
 
-    it('It should create game', async () => {
+    test('It should create game', async () => {
         const gameToCreate = new GamesModel({ season: 5, week: 1, homeTeam: 10, awayTeam: 2 })
         const response = await request(app).post('/games').send(gameToCreate)
         const game = await GamesModel.findById(response.body._id)

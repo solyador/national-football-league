@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'test'
 const request = require('supertest')
-require('../../config/dbConfig.js')
+require('../../config/db/dbConfig.js')
 const mongoose = require('mongoose')
 const app = require('../../app.js')
 
@@ -24,7 +24,7 @@ afterEach(async () => {
 })
 
 describe('testing the standings resource crud operations', () => {
-    it('It should return all standings', async () => {
+    test('It should return all standings', async () => {
         const response = await request(app).get('/standings')
         const res = JSON.stringify(response.body)
 
@@ -32,7 +32,7 @@ describe('testing the standings resource crud operations', () => {
         expect(response.statusCode).toBe(200)
     })
 
-    it('It should return one standing', async () => {
+    test('It should return one standing', async () => {
         const standing = new StandingsModel({
             team: 7
         })
@@ -43,7 +43,7 @@ describe('testing the standings resource crud operations', () => {
         expect(response.body.team).toBe(7)
     })
 
-    it('It should delete standing', async () => {
+    test('It should delete standing', async () => {
         const standingToDelete = new StandingsModel({
            team: 10
         })
@@ -56,7 +56,7 @@ describe('testing the standings resource crud operations', () => {
         expect(response.status).toBe(200)
     })
 
-    it('It should update standing', async () => {
+    test('It should update standing', async () => {
         const standingToUpdate = new StandingsModel({
             team: 12,
             win: 11,
@@ -71,7 +71,7 @@ describe('testing the standings resource crud operations', () => {
         expect(response.body.draw).toBe(2)
     })
 
-    it('It should create standing', async () => {
+    test('It should create standing', async () => {
         const standingToCreate = new StandingsModel({
             team: 11
         })
@@ -85,19 +85,19 @@ describe('testing the standings resource crud operations', () => {
 
 describe('testing the standings resource, the errors', () => {
 
-    it('It should return 404 when standing to get not exists', async () => {
+    test('It should return 404 when standing to get not exists', async () => {
         const id = mongoose.Types.ObjectId()
         const response = await request(app).get('/standings/' + id)
         expect(response.status).toBe(404)
     })
 
-    it('It should return 404 when standing to update not exists', async () => {
+    test('It should return 404 when standing to update not exists', async () => {
         const id = mongoose.Types.ObjectId()
         const response = await request(app).put('/standings/' + id).send({})
         expect(response.status).toBe(404)
     })
 
-    it('It should return 404 when standing to delete not exists', async () => {
+    test('It should return 404 when standing to delete not exists', async () => {
         const id = mongoose.Types.ObjectId()
         const response = await request(app).delete('/standings/' + id)
         expect(response.status).toBe(404)

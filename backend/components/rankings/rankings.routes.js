@@ -5,7 +5,7 @@ const rankingsController = require('./rankings.controller.js')
 
 routes.get('/', rankingsController.findAll)
 routes.get('/:id', rankingsController.findOne)
-routes.delete('/:id', rankingsController.delete)
+routes.delete('/:id', rankingsController.deleteOne)
 routes.put('/:id', rankingsController.update)
 routes.post('/', rankingsController.create)
 

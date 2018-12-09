@@ -2,7 +2,7 @@ process.env.NODE_ENV = 'test'
 
 const request = require('supertest')
 const app = require('../../app.js')
-require('../../config/dbConfig.js')
+require('../../config/db/dbConfig.js')
 
 const RankingsModel = require('./rankings.model.js')
 const rankings = [
@@ -38,7 +38,7 @@ describe('test rankings controller', () => {
         expect(response.body.team).toBe(14)
     })
 
-    it('It should delete ranking', async () => {
+    test('It should delete ranking', async () => {
         const rankingToDelete = new RankingsModel({ ranking: 31, season: 4, team: 30 })
         await rankingToDelete.save()
 
@@ -49,7 +49,7 @@ describe('test rankings controller', () => {
         expect(response.status).toBe(200)
     })
 
-    it('It should update ranking', async () => {
+    test('It should update ranking', async () => {
         const rankingToUpdate = new RankingsModel({ ranking: 9, season: 1, team: 3 })
         await rankingToUpdate.save()
         const data = { team: 5 }
@@ -60,7 +60,7 @@ describe('test rankings controller', () => {
         expect(response.body.team).toBe(5)
     })
 
-    it('It should create ranking', async () => {
+    test('It should create ranking', async () => {
         const rankingToCreate = new RankingsModel({ ranking: 5, season: 1, team: 23 })
 
         const response = await request(app).post('/rankings/').send(rankingToCreate)

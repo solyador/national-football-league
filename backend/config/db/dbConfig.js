@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const envConfig = require('./envConfig.js')
+const envConfig = require('../env/envConfig.js')
 
 mongoose.Promise = global.Promise
 const url = envConfig(process.env.NODE_ENV).DB_URL
@@ -10,6 +10,6 @@ try {
 }
 
 mongoose.connection.once('open', () => console.log('mongodb running ', url))
-                   .on('error', err => {
-                       throw err
-                   })
+    .on('error', err => {
+        throw err
+    })

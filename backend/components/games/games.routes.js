@@ -5,7 +5,7 @@ const gamesController = require('./games.controller.js')
 
 routes.get('/', gamesController.findAll)
 routes.get('/:id', gamesController.findOne)
-routes.delete('/:id', gamesController.delete)
+routes.delete('/:id', gamesController.deleteOne)
 routes.put('/:id', gamesController.update)
 routes.post('', gamesController.create)
 

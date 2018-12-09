@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'test'
 const request = require('supertest')
 const app = require('../../app.js')
 const mongoose = require('mongoose')
-require('../../config/dbConfig.js')
+require('../../config/db/dbConfig.js')
 
 const SeasonsModel = require('./seasons.model.js')
 const seasons = [
@@ -40,7 +40,7 @@ describe('test seasons controller', () => {
         expect(response.body.weekToPlay).toBe(15)
     })
 
-    it('It should delete season', async () => {
+    test('It should delete season', async () => {
         const seasonToDelete = new SeasonsModel({ seasonId: 4, weekToPlay: 1 })
         await seasonToDelete.save()
 
@@ -51,7 +51,7 @@ describe('test seasons controller', () => {
         expect(response.status).toBe(200)
     })
 
-    it('It should update season', async () => {
+    test('It should update season', async () => {
         const seasonToUpdate = new SeasonsModel({ seasonId: 4, weekToPlay: 1 })
         await seasonToUpdate.save()
         const data = { weekToPlay: 12 }
@@ -63,7 +63,7 @@ describe('test seasons controller', () => {
         expect(season.weekToPlay).toBe(12)
     })
 
-    it('It should create season', async () => {
+    test('It should create season', async () => {
         const seasonToCreate = new SeasonsModel({ seasonId: 5, weekToPlay: 1, champion: 23 })
 
         const response = await request(app).post('/seasons').send(seasonToCreate)

@@ -5,7 +5,7 @@ const teamsController = require('./teams.controller.js')
 
 routes.get('/', teamsController.findAll)
 routes.get('/:id', teamsController.findOne)
-routes.delete('/:id', teamsController.delete)
+routes.delete('/:id', teamsController.deleteOne)
 routes.put('/:id', teamsController.update)
 routes.post('/', teamsController.create)
 

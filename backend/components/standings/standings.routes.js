@@ -5,7 +5,7 @@ const standingsController = require('./standings.controller.js')
 
 routes.get('/', standingsController.findAll)
 routes.get('/:id', standingsController.findOne)
-routes.delete('/:id', standingsController.delete)
+routes.delete('/:id', standingsController.deleteOne)
 routes.put('/:id', standingsController.update)
 routes.post('/', standingsController.create)
 
