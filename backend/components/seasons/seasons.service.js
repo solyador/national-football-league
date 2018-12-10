@@ -1,24 +1,24 @@
 const SeasonsModel = require('./seasons.model.js')
 
-findAll = async () => {
+const findAll = async () => {
     return await SeasonsModel.find()
-},
+}
 
-findOne = async (seasonId) => {
+const findOne = async (seasonId) => {
     return await SeasonsModel.findById(seasonId)
-},
+}
 
-deleteOne = async (seasonId) => {
+const deleteOne = async (seasonId) => {
     return await SeasonsModel.deleteOne({ _id: seasonId })
-},
+}
 
-update = async (seasonId, data) => {
+const update = async (seasonId, data) => {
     const query = { _id: seasonId }
     const options = { new: true }
     return await SeasonsModel.findOneAndUpdate(query, data, options)
-},
+}
 
-create = async (season) => {
+const create = async (season) => {
     try {
         return await SeasonsModel.create(season)
     } catch (error) {

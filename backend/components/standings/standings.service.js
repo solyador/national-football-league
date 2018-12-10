@@ -1,24 +1,24 @@
 const StandingsModel = require('./standings.model.js')
 
-findAll = async () => {
+const findAll = async () => {
     return await StandingsModel.find()
-},
+}
 
-findOne = async (id) => {
+const findOne = async (id) => {
     return await StandingsModel.findOne({ _id: id })
-},
+}
 
-deleteOne = async (id) => {
+const deleteOne = async (id) => {
     return await StandingsModel.deleteOne({ _id: id })
-},
+}
 
-update = async (id, data) => {
+const update = async (id, data) => {
     const query = { _id: id }
     const options = { new: true }
     return await StandingsModel.findOneAndUpdate(query, data, options)
-},
+}
 
-create = async (standing) => {
+const create = async (standing) => {
     try {
         return await StandingsModel.create(standing)
     } catch (error) {
