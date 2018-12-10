@@ -1,7 +1,7 @@
 const rankingsService = require('./rankings.service.js')
 
 
-findAll = async (req, res) => {
+const findAll = async (req, res) => {
     const rankings = await rankingsService.findAll()
     if (!rankings) {
         return res.status(404).send({
@@ -9,9 +9,9 @@ findAll = async (req, res) => {
         })
     }
     res.send(rankings)
-},
+}
 
-findOne = async (req, res) => {
+const findOne = async (req, res) => {
     const rankingId = req.params.id
     const ranking = await rankingsService.findOne(rankingId)
     if (!ranking) {
@@ -21,9 +21,9 @@ findOne = async (req, res) => {
     }
     res.send(ranking)
 
-},
+}
 
-create = async (req, res) => {
+const create = async (req, res) => {
     const ranking = req.body
     const createdRanking = await rankingsService.create(ranking)
     if (!createdRanking) {
@@ -32,9 +32,9 @@ create = async (req, res) => {
         })
     }
     res.send(createdRanking)
-},
+}
 
-update = async (req, res) => {
+const update = async (req, res) => {
     const rankingId = req.params.id
     const data = req.body
     const rankingUpdated = await rankingsService.update(rankingId, data)
@@ -44,9 +44,9 @@ update = async (req, res) => {
         })
     }
     res.send(rankingUpdated)
-},
+}
 
-deleteOne = async (req, res) => {
+const deleteOne = async (req, res) => {
     const rankingId = req.params.id
     const response = await rankingsService.deleteOne(rankingId)
     if (response.n === 0) {

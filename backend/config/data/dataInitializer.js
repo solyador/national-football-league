@@ -2,7 +2,7 @@ const TeamsModel = require('../../components/teams/teams.model.js')
 const RankingsModel = require('../../components/rankings/rankings.model.js')
 const StandingsModel = require('../../components/standings/standings.model.js')
 
-initTeams = async () => {
+const initTeams = async () => {
     const teams = await TeamsModel.find()
     if (teams && teams.length === 32) {
         return
@@ -14,9 +14,9 @@ initTeams = async () => {
         teams.push(team)
     })
     await TeamsModel.insertMany(teams)
-},
+}
 
-initRankings = async () => {
+const initRankings = async () => {
     let rankings = await RankingsModel.find()
     if (rankings && rankings.length === 32) {
         return
@@ -31,9 +31,9 @@ initRankings = async () => {
         rankings.push(ranking)
     }
     await RankingsModel.insertMany(rankings)
-},
+}
 
-initStandings = async () => {
+const initStandings = async () => {
     let standings = await StandingsModel.find()
     if (standings && standings.length === 32) {
         return

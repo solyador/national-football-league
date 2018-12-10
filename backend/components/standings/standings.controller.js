@@ -1,6 +1,6 @@
 const standingsService = require('./standings.service.js')
 
-findAll = async (req, res) => {
+const findAll = async (req, res) => {
     const standings = await standingsService.findAll()
     if (!standings) {
         return res.status(404).send({
@@ -8,9 +8,9 @@ findAll = async (req, res) => {
         })
     }
     res.send(standings)
-},
+}
 
-findOne = async (req, res) => {
+const findOne = async (req, res) => {
     const id = req.params.id
     const standing = await standingsService.findOne(id)
     if (!standing) {
@@ -20,9 +20,9 @@ findOne = async (req, res) => {
     }
     res.send(standing)
 
-},
+}
 
-create = async (req, res) => {
+const create = async (req, res) => {
     const standing = req.body
     const createdStanding = await standingsService.create(standing)
     if (!createdStanding) {
@@ -31,9 +31,9 @@ create = async (req, res) => {
         })
     }
     res.send(createdStanding)
-},
+}
 
-update = async (req, res) => {
+const update = async (req, res) => {
     const id = req.params.id
     const data = req.body
     const standingUpdated = await standingsService.update(id, data)
@@ -43,9 +43,9 @@ update = async (req, res) => {
         })
     }
     res.send(standingUpdated)
-},
+}
 
-deleteOne = async (req, res) => {
+const deleteOne = async (req, res) => {
     const id = req.params.id
     const response = await standingsService.deleteOne(id)
     if (response.n === 0) {

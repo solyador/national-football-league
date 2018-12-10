@@ -1,7 +1,7 @@
 const gamesService = require('./games.service.js')
 
 
-findAll = async (req, res) => {
+const findAll = async (req, res) => {
     const games = await gamesService.findAll()
     if (!games) {
         return res.status(404).send({
@@ -9,9 +9,9 @@ findAll = async (req, res) => {
         })
     }
     res.send(games)
-},
+}
 
-findOne = async (req, res) => {
+const findOne = async (req, res) => {
     const id = req.params.id
     const game = await gamesService.findOne(id)
     if (!game) {
@@ -21,9 +21,9 @@ findOne = async (req, res) => {
     }
     res.send(game)
 
-},
+}
 
-create = async (req, res) => {
+const create = async (req, res) => {
     const game = req.body
     const createdGame = await gamesService.create(game)
     if (!createdGame) {
@@ -32,9 +32,9 @@ create = async (req, res) => {
         })
     }
     res.send(createdGame)
-},
+}
 
-update = async (req, res) => {
+const update = async (req, res) => {
     const gameId = req.params.id
     const data = req.body
     const game = await gamesService.update(gameId, data)
@@ -44,9 +44,9 @@ update = async (req, res) => {
         })
     }
     res.send(game)
-},
+}
 
-deleteOne = async (req, res) => {
+const deleteOne = async (req, res) => {
     const gameId = req.params.id
     const response = await gamesService.deleteOne(gameId)
     if (response.n === 0) {
