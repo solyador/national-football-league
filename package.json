@@ -8,9 +8,9 @@
     "server": "cross-env NODE_ENV=development nodemon server.js",
     "client": "cd frontend && npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" ",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "keywords": [

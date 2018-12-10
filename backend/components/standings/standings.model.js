@@ -9,9 +9,6 @@ const StandingSchema = mongoose.Schema({
     win: {
         type: Number
     },
-    win: {
-        type: Number
-    },
     lost: {
         type: Number
     },

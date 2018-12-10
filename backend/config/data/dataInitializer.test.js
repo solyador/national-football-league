@@ -1,8 +1,8 @@
-process.env.NODE_ENV = 'test'
 
 require('../../config/db/dbConfig.js')
 const TeamsModel = require('../../components/teams/teams.model.js')
 const RankingsModel = require('../../components/rankings/rankings.model.js')
+const StandingsModel = require('../../components/standings/standings.model.js')
 const dataInitializer = require('./dataInitializer.js')
 
 beforeEach(async () => {
@@ -12,6 +12,7 @@ beforeEach(async () => {
 afterEach(async () => {
     await TeamsModel.remove({})
     await RankingsModel.remove({})
+    await StandingsModel.remove({})
 })
 
 describe('should init data when calling the init method', () => {
@@ -28,5 +29,11 @@ describe('should init data when calling the init method', () => {
         expect(rankings.length).toBe(32)
         expect(rankings[0].team).toBe(rankings[0].ranking)
         expect(rankings[1].team).toBe(rankings[1].ranking)
+    })
+
+    test('should init standings on startup if first time', async () => {
+        await dataInitializer.initStandings()
+        const standings = await StandingsModel.find() 
+        expect(standings.length).toBe(32)
     })
 })

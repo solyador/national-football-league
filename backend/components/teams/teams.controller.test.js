@@ -1,4 +1,3 @@
-process.env.NODE_ENV = 'test'
 require('../../config/db/dbConfig.js')
 const request = require('supertest')
 const mongoose = require('mongoose')
